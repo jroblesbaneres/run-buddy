@@ -5,12 +5,10 @@
 }
 
 body {
-    /* more on this crazy alphanumerical value in a minute! */
     color: #39a6b2;
     font-family: Helvetica, Arial, sans-serif;
 }
 
-/* apply styles to <header> */
 header {
     display: flex;
     justify-content: space-between;
@@ -59,6 +57,13 @@ header nav ul li a {
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+header nav ul li a:hover {
+    background: #fce138;
+    color: #024e76;
+    border-radius: 15px;
+    text-shadow: none;
+}
+
 footer {
     display: flex;
     justify-content: space-between;
@@ -87,7 +92,6 @@ section {
     padding: 60px;
 }
 
-/* Hero Style Start */
 .hero {
     display: flex;
     justify-content: center;
@@ -99,7 +103,6 @@ section {
     background-attachment: fixed;
     background-position: 80%;
 }
-/* Hero Style End */
 
 .hero-form {
     border: 3px solid #024e76;
@@ -130,6 +133,12 @@ section {
     width: 100%;
     margin-bottom: 15px;
     border-radius: 10px;
+    background-color: rgba(255,255,255,0.75);
+}
+
+.form-input:focus {
+    background-color: rgba(255,255,255,1);
+    outline: none;
 }
 
 .hero-form label {
@@ -143,6 +152,10 @@ section {
     padding: 10px 20px;
     font-size: 16px;
     border-radius: 10px;
+}
+
+.hero-form button:hover {
+    background-color: #39a6b2;
 }
 
 .hero-cta {
@@ -161,26 +174,6 @@ section {
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-/*HERO STYLES END */
-
-/* No needed anymore
-.intro {
-    text-align: center;
-}
-*/
-
-/* No needed anymore
-.intro h2 {
-    display: inline-block;
-    font-size: 55px;
-    color: #024e76;
-    margin-bottom: 35px;
-    padding: 0 100px 20px 100px;
-    border-bottom: 3px solid;
-    border-color: #fce138;
-} 
-*/
-
 .intro p {
     margin:0 auto;
     line-height: 1.7;
@@ -193,17 +186,6 @@ section {
 .steps {
     background: #fce138;
 }
-
-/* No needed anymore
-.steps h2 {
-    font-size: 55px;
-    color: #024e76;
-    margin-bottom: 35px;
-    padding: 0 100px 20px 100px;
-    border-bottom: 3px solid;
-    border-color: #39a6b2;
-}
-*/
 
 .section-title {
     font-size: 48px;
@@ -223,25 +205,19 @@ section {
     border-color: #39a6b2;
 }
 
-/* No needed anymore
-.steps div {
-    margin-bottom: 80px;
-}
-
-.steps img {
-    width: 15%;
-    margin: 10px 0;
-} */
-
 .step {
     margin: 50px auto;
     padding-bottom: 50px;
     width: 80%;
-    border-bottom: 1 px solid #39a6b2;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    border-bottom: 1px solid #39a6b2;
+}
+
+.step:last-child {
+    border-bottom: none;
 }
 
 .step h3 {
@@ -280,16 +256,6 @@ section {
 .step-text {
     flex: 12;
 }
-
-/* No needed anymore
-.steps span {
-    font-size: 38px;
-} */
-
-/* No needed anymore
-.trainers {
-    text-align: center;
-} */
 
 .trainer {
     margin: 20px;
@@ -396,6 +362,12 @@ section {
     margin-bottom: 15px;
     margin-top: 5px;
     border-radius: 10px;
+    background-color: rgba(255,255,255, 0.75)
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    background-color: rgba(255,255,255, 1);
+    outline: none;
 }
 
 .contact-form button {
@@ -409,6 +381,11 @@ section {
     border-radius: 10px;
 }
 
+.contact-form button:hover {
+    color: #fce138;
+    background-color: #39a6b2;
+}
+
 /* REACH OUT STYLES END */
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
@@ -418,34 +395,43 @@ section {
        justify-content: center;
        position: relative;
    }
+
    header h1 {
        width: 100%;
        text-align: center;
    }
+
    header nav ul {
        margin-top: 20px;
        width: 100%;
        justify-content: center;
    }
+
    header nav ul li a {
        font-size: 20px;
    }
+
    footer h2, footer div {
        text-align: center;
        width: 100%;
    }
+
    .hero-cta, .hero-form {
        width:100%;
    }
+
    .hero-cta {
        text-align:center;
    }
+
    .section-title {
        width: 80%;
    }
+
    .trainer {
        flex: 0 70%;
    }
+
    .contact-info iframe {
        flex: 1 100%;
    }
@@ -456,21 +442,25 @@ section {
     section {
         padding: 30px 15px;
     }
+
     .step h3 {
         flex: 1 100%;
         text-align: center;
     }
+
     .step-info {
         flex: 2 100%;
         text-align: center;
         justify-content: center;
     }
+
     .step-img {
         flex: 0 32%;
         margin-right: 0;
         margin-top: 15px;
         margin-bottom: 15px;
     }
+
     .step-text {
         flex: 100%;
     }
@@ -482,21 +472,27 @@ section {
     .hero-form button {
         width: 100%;
     }
+
     .section-title {
         width: 95%;
     }
+
     .intro p {
         width: 100%;
     }
+
     .trainer {
         flex: 0 100%;
     }
+
     .contact-info {
         text-align: center;
     }
+
     .contact-info > * {
         flex: 0 100%;
     }
+
     .contact-form {
         order: 3;
     }
